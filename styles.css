@@ -18,7 +18,7 @@ body, .line, #left, #right, #info-container, form, .form-item {
 }
 
 #left {
-    background-image: url('/images/30002726_2207_w046_n005_179a_p1_179.jpg');
+    background-image: url('./images/30002726_2207_w046_n005_179a_p1_179.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
