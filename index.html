@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up form</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script defer src="main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap" rel="stylesheet">
@@ -23,9 +24,10 @@
             <p>This is not a real online service! Don't miss out, you need this in your life to realise your wildest dreams.</p>
             <p>Sign up now to get started.</p>
         </div>
-        <form id="form" action="#" method="post">
+        <form id="form" action="" method="GET">
             <div id="form-items-container">
                     <h1>Let's go!</h1>
+                    <div id="check" class="error"></div>
                     <div class="form-item">
                         <label for="first-name">FIRST NAME</label>
                         <input type="text" name="first-name" id="first-name" required>    
@@ -40,13 +42,14 @@
                     </div>
                     <div class="form-item">
                         <label for="password">PASSWORD</label>
-                        <input type="password" name="password"  id="password" min="8" max="16" required>
+                        <input type="password" name="password"  id="password" minlength="8" maxlength="16" required>
                     </div>
                     <div class="form-item">
                         <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password" name="confirm-password"  id="confirm-password" min="8" max="16" required>
+                        <input type="password" name="confirm-password"  id="confirm-password" minlength="8" maxlength="16" required>
+                        <div id="error-message" class="error"></div>
                     </div>
-            <button type="submit" href="index.html">Create Account</button>
+            <button type="submit">Create Account</button>
             <p>Already have an account? <a href="index.html">LOG IN</a></p>
         </form> 
         </div>

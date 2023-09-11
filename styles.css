@@ -8,22 +8,23 @@
 
 }
 
-body, .line {
+body, .line, #left, #right, #info-container, form, .form-item {
    display: flex;
 }
 
+#left, #right, form, .form-item, #info-container {
+    flex-direction: column;
+
+}
 
 #left {
-    display: flex;
     background-image: url('/images/30002726_2207_w046_n005_179a_p1_179.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     width: 45%;
     height: 100vh;
-    flex-direction: column;
     justify-content: space-between;
-    /*border: solid black 2px;*/
 }
 
 
@@ -37,29 +38,18 @@ body, .line {
     align-items: end;
 }
 
-a {
-    font-size: 0.5rem;
-    text-decoration: none;
-    color: black;
-}
-
 #right{
+    justify-content: center;
     background-color: #5775CE;
     width: 55%;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    
 }
-
 
 #info-container {
     margin-left: 10%;
     margin-right: 10%;
-    /*border: solid black 2px;*/
     max-width: 450px;
-    display: flex;
-    flex-direction: column;
 }
 
 #info-text{
@@ -67,56 +57,56 @@ a {
 }
 
 form { 
-    display: flex;
-    flex-direction: column;
     width: 300px;
-    padding:10px 30px 10px 30px;
+    padding:20px 30px 20px 30px;
     text-align:left;
-    padding: 5%;
     font-size: 0.6rem;
     border-radius: 8px;
     color: #5775CE;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-top: 15px;
-
 }
 
 .form-item {
-    display: flex;
-    flex-direction: column; 
-    padding-bottom: 5%;
-    
+    padding-bottom: 5%;  
 }
 
 
 input {
     border: lightgray solid 1px; 
     background: none;
-    font-size: 1rem;
+    font-size: 0.8rem;
+    color: rgb(39, 39, 39);
     height: 100%;
-  width: 100%;
-  border: 1px solid #DADCE0;
-  border-radius: 7px;
-  margin-top: 2px;
+    width: auto;
+    padding: 5px;
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
+    margin-top: 2px;
 }
 
 input:focus {
     outline:1px #FAB12E solid;
 }
 
+.error {
+    color: red;
+    height: 5px;
+    margin-bottom: 15px;
+}
+
 button {
     background-color: #FAB12E;
     border: none;
     padding: 2% 5%;
-    margin-top: 5%;
+    margin-top: 2%;
     border-radius: 5%;
     font-size: 1rem;
     color: white;
     font-weight: bold;
     cursor: pointer;
-    width: 100%;
-    
+    width: 100%;   
 }
 
 button:hover {
@@ -128,7 +118,10 @@ a {
     color: #FAB12E;
     text-decoration: none;
     font-weight: bold;
+    font-size: 0.5rem;
 }
+
+
 
 
 /*screen formatting*/ 
